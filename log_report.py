@@ -37,9 +37,11 @@ def print_result() :
     for k,v in top3Urls:
         print "%s - %s" % (k, v)
 
+    orderedStatus = sorted(status_list.items(), key=operator.itemgetter(1), reverse=True)
+
     print ""
     print "Status:"
-    for k,v in status_list.items():
+    for k,v in orderedStatus:
         print "%s - %s" % (k, v)
 
 def main():
